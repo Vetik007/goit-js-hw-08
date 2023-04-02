@@ -27,13 +27,13 @@ function onFormInput(evt) {
 function onFormSubmit(evt) {
 
     evt.preventDefault();
-  
-    console.log({ email: email.value, message: message.value });
 
     if (email.value === '' || message.value.trim() === '') {
         alert("Error. Please fill all fields!");
         return;
     }
+
+    console.log({ email: email.value, message: message.value });
 
     form.reset();
     localStorage.removeItem(LOCAL_STORAGE_KEY);
